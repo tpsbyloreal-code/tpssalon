@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TPS Hair & Beauty Studio — Service Menu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream: #fbf5ec;
+    --cream-deep: #f2e6d6;
+    --card: #fffdfa;
+    --gold: #b08d57;
+    --gold-dark: #8c6c3d;
+    --gold-pale: #e9d9bd;
+    --ink: #3a2d26;
+    --muted: #7a6a5c;
+    --line: #e7d9c3;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    padding:0;
+    background:
+      radial-gradient(1200px 500px at 50% -10%, var(--cream-deep), var(--cream) 60%);
+    font-family:'Poppins', sans-serif;
+    color:var(--ink);
+  }
+  .wrap{
+    max-width:880px;
+    margin:0 auto;
+    padding:64px 24px 90px;
+  }
+  header{
+    text-align:center;
+    margin-bottom:56px;
+  }
+  .crest{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    margin-bottom:18px;
+  }
+  .crest .line{
+    width:70px;
+    height:1px;
+    background:var(--gold);
+  }
+  .crest .dot{
+    width:7px;height:7px;border-radius:50%;background:var(--gold);
+  }
+  h1{
+    font-family:'Lora', serif;
+    font-weight:500;
+    font-size:44px;
+    margin:0 0 6px;
+    letter-spacing:0.3px;
+  }
+  header .by{
+    font-family:'Lora', serif;
+    font-style:italic;
+    color:var(--gold-dark);
+    font-size:18px;
+    margin:0 0 18px;
+  }
+  header p.sub{
+    color:var(--muted);
+    font-size:15px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin:0;
+  }
+
+  .category{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:34px 38px;
+    margin-bottom:34px;
+    box-shadow:0 10px 30px -20px rgba(90,65,30,0.35);
+  }
+  .category h2{
+    font-family:'Lora', serif;
+    font-weight:500;
+    font-size:26px;
+    margin:0 0 4px;
+    color:var(--ink);
+  }
+  .category .note{
+    font-size:13px;
+    font-style:italic;
+    color:var(--muted);
+    margin:0 0 22px;
+  }
+  .col-heads{
+    display:grid;
+    grid-template-columns: 1fr 90px 90px;
+    gap:14px;
+    padding:0 0 10px;
+    border-bottom:1.5px solid var(--gold-pale);
+    margin-bottom:6px;
+  }
+  .col-heads span{
+    font-size:12px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--gold-dark);
+    font-weight:600;
+    text-align:right;
+  }
+  .col-heads span:first-child{ text-align:left; }
+
+  .row{
+    display:grid;
+    grid-template-columns: 1fr 90px 90px;
+    gap:14px;
+    align-items:baseline;
+    padding:11px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .row:last-child{ border-bottom:none; }
+  .row .name{
+    font-size:15.5px;
+    font-weight:500;
+    color:var(--ink);
+  }
+  .row .desc{
+    display:block;
+    font-family:'Poppins', sans-serif;
+    font-weight:300;
+    font-size:12.5px;
+    color:var(--muted);
+    margin-top:2px;
+  }
+  .row .price{
+    text-align:right;
+    font-size:15.5px;
+    font-weight:500;
+    color:var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+  .row .price.na{
+    color:#c9bba6;
+    font-weight:400;
+  }
+
+  footer{
+    text-align:center;
+    margin-top:50px;
+    color:var(--muted);
+    font-size:13.5px;
+  }
+  footer .line{
+    width:70px;height:1px;background:var(--gold);margin:0 auto 18px;
+  }
+
+  @media (max-width:560px){
+    .wrap{padding:44px 14px 60px;}
+    h1{font-size:32px;}
+    .category{padding:24px 20px;}
+    .col-heads, .row{grid-template-columns: 1fr 68px 68px; gap:8px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="crest"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+    <h1>TPS Hair &amp; Beauty Studio</h1>
+    <p class="by">by L'Oréal</p>
+    <p class="sub">Service Menu</p>
+  </header>
+
+  <!-- HAIR CUT AND WASH -->
+  <section class="category">
+    <h2>Hair Cut and Wash</h2>
+    <div class="col-heads"><span>Service</span><span>Men</span><span>Women</span></div>
+    <div class="row"><span class="name">Beard Shaving</span><span class="price">₹100</span><span class="price na">—</span></div>
+    <div class="row"><span class="name">Hair Cut</span><span class="price">₹300</span><span class="price">₹500</span></div>
+    <div class="row"><span class="name">Kids Hair Cut</span><span class="price">₹250</span><span class="price">₹400</span></div>
+    <div class="row"><span class="name">Women Hair Trimming</span><span class="price na">—</span><span class="price">₹400</span></div>
+    <div class="row"><span class="name">Hair Washing and Conditioning</span><span class="price">₹150</span><span class="price">₹300</span></div>
+    <div class="row"><span class="name">Temporary Hair Styling Blow-dry</span><span class="price na">—</span><span class="price">₹700</span></div>
+    <div class="row"><span class="name">Hair Ironing and Tong Curls</span><span class="price">₹1000</span><span class="price">₹1000</span></div>
+  </section>
+
+  <!-- HAIR COLOUR -->
+  <section class="category">
+    <h2>Hair Colour</h2>
+    <p class="note">T&amp;C apply — base prices only. Actual price depends on hair length and volume.</p>
+    <div class="col-heads"><span>Service</span><span>Men</span><span>Women</span></div>
+    <div class="row"><span class="name">Highlight Per Streak</span><span class="price">₹250</span><span class="price">₹300</span></div>
+    <div class="row"><span class="name">Beard Colour</span><span class="price">₹300</span><span class="price na">—</span></div>
+    <div class="row"><span class="name">Root Touch-up</span><span class="price">₹800</span><span class="price">₹1000</span></div>
+    <div class="row"><span class="name">Root Touch-up (Ammonia Free)</span><span class="price">₹1000</span><span class="price">₹1200</span></div>
+    <div class="row"><span class="name">Global Grey Hair Coverage</span><span class="price">₹1200</span><span class="price">₹3000</span></div>
+    <div class="row"><span class="name">Global Grey Hair Coverage (Ammonia Free)</span><span class="price">₹1000</span><span class="price">₹3000</span></div>
+    <div class="row"><span class="name">Global Fashion Hair Colour</span><span class="price">₹1000</span><span class="price">₹3000</span></div>
+    <div class="row"><span class="name">Global Balayage Hair Colour</span><span class="price">₹1000</span><span class="price">₹3500</span></div>
+    <div class="row"><span class="name">Global Ombre Hair Colour</span><span class="price">₹1000</span><span class="price">₹3500</span></div>
+    <div class="row"><span class="name">Full Head Highlight</span><span class="price">₹2500</span><span class="price">₹3500</span></div>
+  </section>
+
+  <!-- FOOT MASSAGE -->
+  <section class="category">
+    <h2>Foot Massage (Machine)</h2>
+    <div class="col-heads"><span>Service</span><span>Men</span><span>Women</span></div>
+    <div class="row"><span class="name">Foot Massage (15 Min)</span><span class="price">₹300</span><span class="price">₹300</span></div>
+    <div class="row"><span class="name">Foot Massage (30 Min)</span><span class="price">₹500</span><span class="price">₹500</span></div>
+    <div class="row"><span class="name">Foot Massage (60 Min)</span><span class="price">₹1000</span><span class="price">₹1000</span></div>
+  </section>
+
+  <!-- DE-TAN -->
+  <section class="category">
+    <h2>De-Tan</h2>
+    <div class="col-heads"><span>Service</span><span>Men</span><span>Women</span></div>
+    <div class="row"><span class="name">Neck De-Tan (Classic)</span><span class="price">₹300</span><span class="price">₹300</span></div>
+    <div class="row"><span class="name">Neck De-Tan (Advance)</span><span class="price">₹400</span><span class="price">₹400</span></div>
+    <div class="row"><span class="name">Face De-Tan (Classic)</span><span class="price">₹500</span><span class="price">₹500</span></div>
+    <div class="row"><span class="name">Face De-Tan (Advance)</span><span class="price">₹700</span><span class="price">₹700</span></div>
+    <div class="row"><span class="name">Full Hand De-Tan (Classic)</span><span class="price">₹1000</span><span class="price">₹1000</span></div>
+    <div class="row"><span class="name">Full Hand De-Tan (Advance)</span><span class="price">₹1500</span><span class="price">₹1500</span></div>
+  </section>
+
+  <!-- CLEANUP -->
+  <section class="category">
+    <h2>Cleanup</h2>
+    <div class="col-heads"><span>Service</span><span>Men</span><span>Women</span></div>
+    <div class="row"><span class="name">Papaya Face Cleanup</span><span class="price">₹600</span><span class="price">₹600</span></div>
+    <div class="row"><span class="name">Fruit Face Cleanup</span><span class="price">₹600</span><span class="price">₹600</span></div>
+    <div class="row"><span class="name">Oxylife Face Cleanup</span><span class="price">₹900</span><span class="price">₹900</span></div>
+    <div class="row"><span class="name">Lotus Professional Cleanup</span><span class="price">₹1000</span><span class="price">₹1000</span></div>
+    <div class="row"><span class="name">Lotus Professional Radiant Pearl Cleanup</span><span class="price">₹1200</span><span class="price">₹1200</span></div>
+    <div class="row"><span class="name">Aroma Professional Cleanup</span><span class="price">₹1200</span><span class="price">₹1200</span></div>
+    <div class="row"><span class="name">Lotus Herbal Gold Cleanup</span><span class="price">₹1400</span><span class="price">₹1400</span></div>
+    <div class="row"><span class="name">Nature's Professional Advanced Gold Cleanup</span><span class="price">₹1500</span><span class="price">₹1500</span></div>
+    <div class="row"><span class="name">Shahnaz Hussain 24K Gold Cleanup</span><span class="price">₹1600</span><span class="price">₹1600</span></div>
+    <div class="row"><span class="name">O3+ Professional Cleanup</span><span class="price">₹1700</span><span class="price">₹1700</span></div>
+  </section>
+
+  <!-- MANICURE AND PEDICURE -->
+  <section class="category">
+    <h2>Manicure and Pedicure</h2>
+    <div class="col-heads"><span>Service</span><span>Men</span><span>Women</span></div>
+    <div class="row"><span class="name">Manicure (Classic)</span><span class="price">₹800</span><span class="price">₹800</span></div>
+    <div class="row"><span class="name">Manicure (Advance)</span><span class="price">₹1000</span><span class="price">₹1000</span></div>
+    <div class="row"><span class="name">Pedicure (Classic)</span><span class="price">₹1200</span><span class="price">₹1200</span></div>
+    <div class="row"><span class="name">Pedicure (Advance)</span><span class="price">₹1700</span><span class="price">₹1700</span></div>
+    <div class="row"><span class="name">Nail Paint (Hands)</span><span class="price">₹200</span><span class="price">₹200</span></div>
+    <div class="row"><span class="name">Nail Paint (Toes)</span><span class="price">₹200</span><span class="price">₹200</span></div>
+  </section>
+
+  <!-- FACIAL -->
+  <section class="category">
+    <h2>Facial</h2>
+    <div class="col-heads"><span>Service</span><span>Men</span><span>Women</span></div>
+    <div class="row"><span class="name">Papaya Facial<span class="desc">For anti-blemish &amp; de-pigmentation</span></span><span class="price">₹1200</span><span class="price">₹1200</span></div>
+    <div class="row"><span class="name">Fruit Facial (Apple, Mango &amp; Banana)<span class="desc">For skin brightening &amp; radiance boosting</span></span><span class="price">₹1200</span><span class="price">₹1200</span></div>
+    <div class="row"><span class="name">Oxylife Facial<span class="desc">For providing glow to dull, tired &amp; fatigued skin</span></span><span class="price">₹1500</span><span class="price">₹1500</span></div>
+    <div class="row"><span class="name">Lotus Professional Facial<span class="desc">For skin lightening, reducing hyper-pigmentation &amp; uneven skin tone</span></span><span class="price">₹1500</span><span class="price">₹1500</span></div>
+    <div class="row"><span class="name">Lotus Professional Radiant Pearl Facial<span class="desc">For deep glossing &amp; skin lightening</span></span><span class="price">₹2000</span><span class="price">₹2000</span></div>
+    <div class="row"><span class="name">Aroma Professional Facial<span class="desc">For controlling &amp; preventing acne, blemish fading &amp; detoxification of oily skin</span></span><span class="price">₹2000</span><span class="price">₹2000</span></div>
+    <div class="row"><span class="name">Korean Facial<span class="desc">For Korean glass skin glow</span></span><span class="price">₹3000</span><span class="price">₹3000</span></div>
+    <div class="row"><span class="name">De-Tan Facial<span class="desc">For removing skin tan and boosting glow</span></span><span class="price">₹2000</span><span class="price">₹2000</span></div>
+    <div class="row"><span class="name">Lotus Herbals Gold Facial<span class="desc">For glowing skin, removing tan &amp; skin brightening</span></span><span class="price">₹2500</span><span class="price">₹2500</span></div>
+    <div class="row"><span class="name">Nature's Professional Advance Gold Facial<span class="desc">For boosting skin radiance &amp; glow</span></span><span class="price">₹3000</span><span class="price">₹3000</span></div>
+    <div class="row"><span class="name">Shahnaz Hussain 24K Gold Facial<span class="desc">For boosting glow, enhancing complexion &amp; anti-ageing</span></span><span class="price">₹3500</span><span class="price">₹3500</span></div>
+    <div class="row"><span class="name">O3+ Professional Facial<span class="desc">For enhancing complexion, removing tan &amp; glowing skin</span></span><span class="price">₹3500</span><span class="price">₹3500</span></div>
+    <div class="row"><span class="name">Shahnaz Hussain Diamond Facial<span class="desc">For skin tightening &amp; anti-ageing</span></span><span class="price">₹4000</span><span class="price">₹4000</span></div>
+    <div class="row"><span class="name">Hydra Facial<span class="desc">Deep cleansing, gentle exfoliation, black &amp; white head removal, intense hydration, glow boosting, improved texture &amp; reduced fine lines</span></span><span class="price">₹5000</span><span class="price">₹5000</span></div>
+    <div class="row"><span class="name">O3+ Professional Bridal Facial<span class="desc">Glow boosting, skin purification, tan removal, collagen boosting, deep hydration, pore refinement &amp; brightening</span></span><span class="price">₹5000</span><span class="price">₹5000</span></div>
+  </section>
+
+  <!-- PROTEIN & CHEMICAL TREATMENT -->
+  <section class="category">
+    <h2>Protein &amp; Chemical Treatment</h2>
+    <p class="note">T&amp;C apply — base prices only. Actual price depends on hair length and volume.</p>
+    <div class="col-heads"><span>Service</span><span>Men</span><span>Women</span></div>
+    <div class="row"><span class="name">Hair Smoothening</span><span class="price">₹4000</span><span class="price">₹4000</span></div>
+    <div class="row"><span class="name">Hair Straightening</span><span class="price">₹4000</span><span class="price">₹4000</span></div>
+    <div class="row"><span class="name">Hair Rebonding</span><span class="price">₹4000</span><span class="price">₹4000</span></div>
+    <div class="row"><span class="name">Hair Botox Treatment</span><span class="price">₹5000</span><span class="price">₹5000</span></div>
+    <div class="row"><span class="name">Hair Keratin Treatment</span><span class="price">₹5000</span><span class="price">₹5000</span></div>
+    <div class="row"><span class="name">Hair Nanoplastia Treatment</span><span class="price">₹5000</span><span class="price">₹5000</span></div>
+    <div class="row"><span class="name">Hair Kera Smoothening Treatment</span><span class="price">₹6000</span><span class="price">₹6000</span></div>
+  </section>
+
+  <!-- HAIR SPA & SCALP TREATMENT -->
+  <section class="category">
+    <h2>Hair Spa &amp; Scalp Treatment</h2>
+    <div class="col-heads"><span>Service</span><span>Men</span><span>Women</span></div>
+    <div class="row"><span class="name">Normal Hair Spa</span><span class="price">₹1000</span><span class="price">₹1000</span></div>
+    <div class="row"><span class="name">Treatment Hair Spa — For Dandruff</span><span class="price">₹1500</span><span class="price">₹1500</span></div>
+    <div class="row"><span class="name">Treatment Hair Spa — For Deep Nourishment</span><span class="price">₹1500</span><span class="price">₹1500</span></div>
+    <div class="row"><span class="name">Treatment Hair Spa — For Frizzy Hair</span><span class="price">₹1500</span><span class="price">₹1500</span></div>
+    <div class="row"><span class="name">Treatment Hair Spa — For Repairing Damaged Hair</span><span class="price">₹1500</span><span class="price">₹1500</span></div>
+    <div class="row"><span class="name">Treatment Hair Spa — For Hair Breakage</span><span class="price">₹1500</span><span class="price">₹1500</span></div>
+    <div class="row"><span class="name">Treatment Hair Spa — For Oily Scalp</span><span class="price">₹1500</span><span class="price">₹1500</span></div>
+    <div class="row"><span class="name">Keratin Hair Spa</span><span class="price">₹1700</span><span class="price">₹1700</span></div>
+    <div class="row"><span class="name">Moroccan Oil Keratin Spa</span><span class="price">₹2000</span><span class="price">₹2000</span></div>
+    <div class="row"><span class="name">De Fabulous Reviver Oil Hair Spa</span><span class="price">₹2000</span><span class="price">₹2000</span></div>
+    <div class="row"><span class="name">De Fabulous Marula Oil Hair Spa</span><span class="price">₹2000</span><span class="price">₹2000</span></div>
+    <div class="row"><span class="name">Wella Plex Hair Strengthening Treatment</span><span class="price">₹2500</span><span class="price">₹2500</span></div>
+    <div class="row"><span class="name">Absolut Repair Molecular Treatment</span><span class="price">₹2500</span><span class="price">₹2500</span></div>
+  </section>
+
+  <!-- PIERCING -->
+  <section class="category">
+    <h2>Piercing</h2>
+    <div class="col-heads"><span>Service</span><span>Men</span><span>Women</span></div>
+    <div class="row"><span class="name">Per Pierce</span><span class="price">₹300</span><span class="price">₹300</span></div>
+  </section>
+
+  <!-- WAXING, THREADING & SCRUBBING -->
+  <section class="category">
+    <h2>Waxing, Threading &amp; Scrubbing</h2>
+    <div class="col-heads"><span>Service</span><span>Men</span><span>Women</span></div>
+    <div class="row"><span class="name">Forehead Threading</span><span class="price na">—</span><span class="price">₹30</span></div>
+    <div class="row"><span class="name">Upper and Lower Lip Threading</span><span class="price na">—</span><span class="price">₹40</span></div>
+    <div class="row"><span class="name">Eyebrow Threading</span><span class="price na">—</span><span class="price">₹60</span></div>
+    <div class="row"><span class="name">Full Face Threading</span><span class="price na">—</span><span class="price">₹300</span></div>
+    <div class="row"><span class="name">Lower Upper Waxing</span><span class="price na">—</span><span class="price">₹200</span></div>
+    <div class="row"><span class="name">Under Arm Waxing (Advance)</span><span class="price na">—</span><span class="price">₹300</span></div>
+    <div class="row"><span class="name">Full Face Waxing</span><span class="price na">—</span><span class="price">₹500</span></div>
+    <div class="row"><span class="name">Full Hand Waxing (Classic)</span><span class="price na">—</span><span class="price">₹600</span></div>
+    <div class="row"><span class="name">Full Hand Waxing (Rica)</span><span class="price na">—</span><span class="price">₹800</span></div>
+    <div class="row"><span class="name">Half Leg Waxing (Classic)</span><span class="price na">—</span><span class="price">₹600</span></div>
+    <div class="row"><span class="name">Half Leg Waxing (Rica)</span><span class="price na">—</span><span class="price">₹800</span></div>
+    <div class="row"><span class="name">Full Leg Waxing (Classic)</span><span class="price na">—</span><span class="price">₹1200</span></div>
+    <div class="row"><span class="name">Full Leg Waxing (Rica)</span><span class="price na">—</span><span class="price">₹1400</span></div>
+    <div class="row"><span class="name">Full Body Waxing (Classic)</span><span class="price na">—</span><span class="price">₹4000</span></div>
+    <div class="row"><span class="name">Full Body Waxing (Rica)</span><span class="price na">—</span><span class="price">₹4800</span></div>
+    <div class="row"><span class="name">Back Polishing</span><span class="price na">—</span><span class="price">₹1000</span></div>
+    <div class="row"><span class="name">Foot Scrub and Massage</span><span class="price na">—</span><span class="price">₹1500</span></div>
+    <div class="row"><span class="name">Full Body Scrubbing</span><span class="price na">—</span><span class="price">₹2500</span></div>
+  </section>
+
+  <!-- SCALP HAIR OILING & HEAD MASSAGE -->
+  <section class="category">
+    <h2>Scalp Hair Oiling &amp; Head Massage</h2>
+    <div class="col-heads"><span>Service</span><span>Men</span><span>Women</span></div>
+    <div class="row"><span class="name">Coconut Oil Head Massage</span><span class="price">₹500</span><span class="price">₹800</span></div>
+    <div class="row"><span class="name">Navaratna Oil Head Massage</span><span class="price">₹500</span><span class="price">₹800</span></div>
+    <div class="row"><span class="name">Organic Almond Oil Head Massage</span><span class="price">₹600</span><span class="price">₹1000</span></div>
+    <div class="row"><span class="name">Olive Oil Head Massage</span><span class="price">₹600</span><span class="price">₹1000</span></div>
+    <div class="row"><span class="name">Moroccan Oil Head Massage</span><span class="price">₹1000</span><span class="price">₹1200</span></div>
+  </section>
+
+  <footer>
+    <div class="line"></div>
+    Chapaguri Rd, opposite Smart Bazaar, near Indian Oil Petrol Pump, Amguri, Bongaigaon, Assam 783380
+  </footer>
+
+</div>
+</body>
+</html>
